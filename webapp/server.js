@@ -7,6 +7,7 @@ let app = express()
 app.use(logger('dev'))
 app.use(bodyParser.json())
 
+app.use('/', require('./routes'))
 
 app.use(errorHandler())
 app.listen(8000)
